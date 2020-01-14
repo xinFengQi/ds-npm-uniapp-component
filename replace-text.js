@@ -14,9 +14,22 @@ export default {
         }
     },
     // 初始化加载
+    beforeCreate() {
+        console.group('replace-text组件 beforeCreate 状态=====》');
+    },
     onLoad(option) {
         _self = this;
-
+        console.log('onLoad 状态=====》');
+    },
+    
+    onShow() {
+        console.log('onShow 状态=====》');
+    },
+    onReady() {
+        console.log('onReady 状态====》');
+    },
+    onUnload() {
+        console.groupEnd('onUnload 状态=====》');
     },
     // 下拉刷新
     onPullDownRefresh:() => {
